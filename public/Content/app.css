@@ -1,0 +1,281 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Rubik+Dirt&display=swap');
+.mobileOnly{ display: none;}
+/*Nate Coolidge - 100749708*/
+.phoneOnly{ display: none;}
+/* Color scheme hexidecimal values #2372D9 #359AF2 #B9E1F7 #66BCF2 #CACAD4 */
+
+@keyframes fade_in /*For animating the images*/
+{
+    0% {transform:translateY(-200px); opacity:0}
+    100% {transform:translateY(0px); opacity:1}
+}
+
+body 
+{ 
+    font-family: Verdana, Geneva, Arial, sans-serif; /*extra fonts in case not in user's system*/
+    background:linear-gradient(to bottom, #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%);
+    min-height: 100vh;/*forces body to fill entire page no matter screen size*/
+    margin: 0;
+}
+
+#wrapper 
+{
+    float: left;
+    height:100%;
+    width: 100%;
+    margin:auto;
+}
+
+#banner
+{
+    position: fixed;
+    z-index: 1; /*Force banner on top of everything else - https://stackoverflow.com/questions/54534042/looking-at-a-problem-with-image-overlapping-nav-bar*/
+    float: left;
+    width: 100%;
+}
+
+
+nav img
+{
+    float:left;
+    margin-left: 1%;
+    margin-right: 1%;
+    width: 50px;
+    border-radius:80px;
+    margin-top: 0.7%;
+    margin-bottom: 0.5%;
+}
+
+
+.social_img
+{
+    width:80px;
+    height: auto;
+    padding: 10px;
+}
+
+#home_images
+{
+    float: left;
+    width:100%;
+}
+
+#home_images .img1
+{
+    float: left;
+    position: relative;
+    margin-top: 5%;
+    margin-left:5%;
+    animation: fade_in 5s;
+    border-radius: 25%;
+    width:20%;
+}
+
+#home_images .img2
+{
+    float: left;
+    position: relative;
+    animation: fade_in 5s;
+    border-radius: 25%;
+    margin-top:3%;
+    margin-left:2%;
+    width:40%;
+}
+
+
+aside .img1
+{
+    position: relative;
+    margin-top: 1%;
+    margin-left: 2%;
+    animation: fade_in 5s;
+    border-radius: 25%;
+    width:330px;
+}
+
+aside .img2
+{
+    position: relative;
+    margin-top: 1%;
+    margin-left: 2%;
+    animation: fade_in 5s;
+    border-radius: 1%;
+    width:330px;
+}
+
+aside .img3
+{
+    position: relative;
+    margin-top: 1%;
+    animation: fade_in 5s;
+    border-radius: 10%;
+    margin-left: 1%;
+    width:400px;
+    height: 300px;
+}
+
+aside video
+{
+    margin-left: 2%;
+}
+
+article
+{
+    margin-top: 150px;
+}
+
+article h1
+
+{
+    font-family: 'Fredoka One', cursive;
+    font-size: 24px;
+    margin-left: 2%;
+    margin-top: 5%;
+}
+article h2
+
+{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    margin-left: 2%;
+    margin-top: -1%;
+}
+
+article p
+{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    margin-left: 2%;
+    margin-right:15%;
+    margin-top: 0.5%;
+}
+
+.intro_vid
+{
+    float: right;
+    position: absolute;
+    left:600px;
+    width: 600px;
+    height: auto;
+    border-radius: 10%;
+}
+
+#contact
+{
+    float: left;
+    margin-left: 4%;
+    margin-top:1%;
+    animation: fade_in 1.5s;
+    width:80%;
+    height:900px;
+    background: linear-gradient(to bottom, rgba(109,179,242,1) 0%,rgba(84,163,238,1) 50%,rgba(54,144,240,1) 51%,rgba(30,105,222,1) 100%);
+    border-radius: 10%;
+    font-weight: bold;
+}
+#contact h1
+{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    margin-left:28%;
+    font-size: 36px;
+}
+#contact form
+{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+    margin-left:5%;
+    font-size: 28px;
+}
+
+#contact textarea 
+{
+    width: 80%;
+    height: 150px;
+    font-size: 18px;
+    color: black;
+}
+
+#contact input 
+{
+    width: 80%;
+    background-color: whitesmoke;
+    color: black;
+    font-size: 18px;
+    padding: 12px 12px;
+    box-sizing: border-box;
+}
+
+#contact input[type="submit"]
+{
+    width: 150px;
+}
+
+#submit
+{ 
+    width: 20%;
+    float: left;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    margin-left: 2%;
+    margin-top:1%;
+    margin-bottom:1%;
+    border-radius: 10px;
+    padding: 0.3%;
+    background: linear-gradient(to bottom, rgba(179,220,237,1) 0%,rgba(41,184,229,1) 50%,rgba(188,224,238,1) 100%); 
+}
+#submit:hover
+{
+    background: linear-gradient(to bottom, rgba(245,246,246,1) 0%,rgba(219,220,226,1) 21%,rgba(184,186,198,1) 49%,rgba(221,223,227,1) 80%,rgba(245,246,246,1) 100%);
+    opacity:4;
+    padding: 0.38%;
+}
+
+.typewriter
+{
+    float:left;
+    position: relative;
+}
+
+.typewriter h3
+{
+    width: 78ch;
+    position:relative;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-left: 30px;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 2vw;
+}
+
+footer
+{
+    float: left;
+}
+
+/*---------------Code below is form https://codepen.io/denic/pen/GRoOxbM------------------*/
+.typewriter h2
+{
+    width: 38ch;
+    position:relative;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-top:20px;
+    margin-left: 30px;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 2vw;
+}
+@keyframes typing 
+{
+    from 
+    {width: 0}
+}
+@keyframes blink 
+{
+    50% {border-color: transparent}
+}
