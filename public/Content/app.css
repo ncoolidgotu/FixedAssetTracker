@@ -1,9 +1,194 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Rubik+Dirt&display=swap');
-.mobileOnly{ display: none;}
-/*Nate Coolidge - 100749708*/
-.phoneOnly{ display: none;}
+/*Nate Coolidge - 100749708*
 /* Color scheme hexidecimal values #2372D9 #359AF2 #B9E1F7 #66BCF2 #CACAD4 */
+
+@media screen and (min-width: 960px){
+    /*Desktop CSS goes here*/
+    .mobileOnly{ display: none;}
+    .phoneOnly{ display: none;}
+    #home_images .img1
+    {
+        float: left;
+        position: relative;
+        margin-top: 5%;
+        margin-left:5%;
+        animation: fade_in 5s;
+        border-radius: 25%;
+        width:20%;
+    }
+
+    #home_images .img2
+    {
+        float: left;
+        position: relative;
+        animation: fade_in 5s;
+        border-radius: 25%;
+        margin-top:3%;
+        margin-left:2%;
+        width:40%;
+    }
+
+    aside .img1
+    {
+    position: relative;
+    margin-top: 1%;
+    margin-left: 2%;
+    animation: fade_in 5s;
+    border-radius: 25%;
+    width:330px;
+    }
+
+    aside .img2
+    {
+    position: relative;
+    margin-top: 1%;
+    margin-left: 2%;
+    animation: fade_in 5s;
+    border-radius: 1%;
+    width:330px;
+    }
+
+    aside .img3
+    {
+    position: relative;
+    margin-top: 1%;
+    animation: fade_in 5s;
+    border-radius: 10%;
+    margin-left: 1%;
+    width:400px;
+    height: 300px;
+    }
+
+    aside video
+    {
+    margin-left: 2%;
+    }
+
+    .intro_vid
+    {
+        float: right;
+        position: absolute;
+        left:600px;
+        width: 600px;
+        height: auto;
+        border-radius: 10%;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 960px) {
+    .phoneOnly{ display: none;}
+    #home_images .img1
+    {
+        float: left;
+        position: relative;
+        margin-top: 5%;
+        margin-left:5%;
+        animation: fade_in 5s;
+        border-radius: 25%;
+        width:20%;
+    }
+
+    #home_images .img2
+    {
+        float: left;
+        position: relative;
+        animation: fade_in 5s;
+        border-radius: 25%;
+        margin-top:3%;
+        margin-left:2%;
+        width:40%;
+    }
+
+    aside .img1 /*classes for article images*/
+    {
+        position: relative;
+        margin-top: 1%;
+        margin-left: 2%;
+        animation: fade_in 5s;
+        border-radius: 25%;
+        width:330px;
+    }
+
+    aside .img2
+    {
+        position: relative;
+        margin-top: 1%;
+        margin-left: 2%;
+        animation: fade_in 5s;
+        border-radius: 1%;
+        width:330px;
+    }
+
+    aside .img3
+    {
+        position: relative;
+        margin-top: 1%;
+        animation: fade_in 5s;
+        border-radius: 10%;
+        margin-left: 3%;
+        width:25%;
+    }
+    aside video /*Videos in article*/
+    {
+        width: 80%;
+        margin-left: 2%;
+        height: auto;
+        border-radius: 20px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .desktopOnly{ display: none;}
+    .notOnPhone{ display: none;}
+    #home_images .img2
+    {
+        float: left;
+        position: relative;
+        margin-top: 5%;
+        margin-left:5%;
+        animation: fade_in 5s;
+        border-radius: 25%;
+        width:90%;
+    }
+    aside .img1 /*Images within the articles*/
+    {
+        position: relative;
+        margin-top: 1%;
+        margin-left: 2%;
+        animation: fade_in 5s;
+        border-radius: 25%;
+        width: 90%;
+        height: auto;
+    }
+
+    aside .img2
+    {
+        position: relative;
+        margin-top: 1%;
+        margin-left: 2%;
+        animation: fade_in 5s;
+        border-radius: 1%;
+        width: 90%;
+        height: auto;
+    }
+
+    aside .img3
+    {
+        position: relative;
+        margin-top: 1%;
+        animation: fade_in 5s;
+        border-radius: 10%;
+        margin-left: 3%;
+        width:200px;
+    }
+    aside video
+    {
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+    }
+}
 
 @keyframes fade_in /*For animating the images*/
 {
@@ -17,22 +202,14 @@ body
     background:linear-gradient(to bottom, #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%);
     min-height: 100vh;/*forces body to fill entire page no matter screen size*/
     margin: 0;
+    padding-top: 80px;
 }
 
-#wrapper 
+.phoneOnly /*Class which only is used for phone displays. Hidden in all other CSS files*/
 {
-    float: left;
-    height:100%;
-    width: 100%;
-    margin:auto;
-}
-
-#banner
-{
-    position: fixed;
-    z-index: 1; /*Force banner on top of everything else - https://stackoverflow.com/questions/54534042/looking-at-a-problem-with-image-overlapping-nav-bar*/
-    float: left;
-    width: 100%;
+    font-family: monospace;
+    font-size: 2vw;
+    margin-left: 5%;
 }
 
 
@@ -47,6 +224,11 @@ nav img
     margin-bottom: 0.5%;
 }
 
+#home_images
+{
+    float: left;
+    width:100%;
+}
 
 .social_img
 {
@@ -55,83 +237,13 @@ nav img
     padding: 10px;
 }
 
-#home_images
-{
-    float: left;
-    width:100%;
-}
-
-#home_images .img1
-{
-    float: left;
-    position: relative;
-    margin-top: 5%;
-    margin-left:5%;
-    animation: fade_in 5s;
-    border-radius: 25%;
-    width:20%;
-}
-
-#home_images .img2
-{
-    float: left;
-    position: relative;
-    animation: fade_in 5s;
-    border-radius: 25%;
-    margin-top:3%;
-    margin-left:2%;
-    width:40%;
-}
-
-
-aside .img1
-{
-    position: relative;
-    margin-top: 1%;
-    margin-left: 2%;
-    animation: fade_in 5s;
-    border-radius: 25%;
-    width:330px;
-}
-
-aside .img2
-{
-    position: relative;
-    margin-top: 1%;
-    margin-left: 2%;
-    animation: fade_in 5s;
-    border-radius: 1%;
-    width:330px;
-}
-
-aside .img3
-{
-    position: relative;
-    margin-top: 1%;
-    animation: fade_in 5s;
-    border-radius: 10%;
-    margin-left: 1%;
-    width:400px;
-    height: 300px;
-}
-
-aside video
-{
-    margin-left: 2%;
-}
-
-article
-{
-    margin-top: 150px;
-}
 
 article h1
-
 {
     font-family: 'Fredoka One', cursive;
     font-size: 24px;
     margin-left: 2%;
-    margin-top: 5%;
+    margin-top: 10px;
 }
 article h2
 
@@ -139,7 +251,7 @@ article h2
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
     margin-left: 2%;
-    margin-top: -1%;
+    font-weight: bold;
 }
 
 article p
@@ -151,15 +263,11 @@ article p
     margin-top: 0.5%;
 }
 
-.intro_vid
+article li
 {
-    float: right;
-    position: absolute;
-    left:600px;
-    width: 600px;
-    height: auto;
-    border-radius: 10%;
+    margin-left: 3%;
 }
+
 
 #contact
 {
@@ -278,4 +386,9 @@ footer
 @keyframes blink 
 {
     50% {border-color: transparent}
+}
+
+.clear
+{
+    clear: both;
 }

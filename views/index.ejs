@@ -1,26 +1,21 @@
-    <%- include ./partials/header.ejs %>
-    <%- include ./partials/main_nav.ejs %>
-    <main>
-        <div id="home_images">
-            <div class="notOnPhone">
-                <img src="/Assets/images/nate.jpeg" class="img1" alt="Nate Coolidge">
-            </div>
-            <img src="/Assets/images/tacops.jpg" class="img2" alt="Nate with friends at Ontario Tech TacOps event">
-            <br>
+<%- include ./partials/header.ejs %>
+<%- include ./partials/main_nav.ejs %>
+<main>
+    <div id="home_images">
+        <div class="notOnPhone">
+            <img src="/Assets/images/nate.jpeg" class="img1" alt="Nate Coolidge">
         </div>
-        <div class="typewriter">
-            <h2>Router(config)# hostname Nate Coolidge</h2>
-            <div class="notOnPhone">
-                <h3>Nate Coolidge(config)# banner motd #Navigate to a page to learn more about me#</h3>
-            </div>
-            <div class="phoneOnly">
-                <h1>Click home button to learn about me</h1>
-            </div>
+        <img src="/Assets/images/tacops.jpg" class="img2" alt="Nate with friends at Ontario Tech TacOps event">
+        <br>
+    </div>
+    <div class="typewriter">
+        <h2>Router(config)# hostname Nate Coolidge</h2>
+        <div class="notOnPhone">
+            <h3>Nate Coolidge(config)# banner motd #Navigate to a page to learn more about me#</h3>
         </div>
-    </main>
-    <%- include ./partials/footer.ejs %>
-    <script src = "/Scripts/app.js"></script>
-    <script src = "/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src = "/jquery/dist/jquery.min.js"></script>
-  </body>
-</html>
+        <div class="phoneOnly">
+            <h1>Click home button to learn about me</h1>
+        </div>
+    </div>
+</main>
+<%- include ./partials/footer.ejs %>
