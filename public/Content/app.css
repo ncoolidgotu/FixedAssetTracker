@@ -74,6 +74,19 @@
         height: auto;
         border-radius: 10%;
     }
+    .typewriter h2
+    {
+        width: 38ch;
+        position:relative;
+        animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+        white-space: nowrap;
+        overflow: hidden;
+        margin-top:20px;
+        margin-left: 30px;
+        border-right: 3px solid;
+        font-family: monospace;
+        font-size: 2vw;
+    }
 }
 
 @media screen and (min-width: 481px) and (max-width: 960px) {
@@ -136,6 +149,19 @@
         height: auto;
         border-radius: 20px;
     }
+    .typewriter h2
+    {
+        width: 38ch;
+        position:relative;
+        animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+        white-space: nowrap;
+        overflow: hidden;
+        margin-top:20px;
+        margin-left: 30px;
+        border-right: 3px solid;
+        font-family: monospace;
+        font-size: 2vw;
+    }
 }
 
 @media screen and (max-width: 480px){
@@ -188,6 +214,19 @@
         height: auto;
         border-radius: 20px;
     }
+    .typewriter h2
+    {
+        width: 38ch;
+        position:relative;
+        animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+        white-space: nowrap;
+        overflow: hidden;
+        margin-top:20px;
+        margin-left: 30px;
+        border-right: 3px solid;
+        font-family: monospace;
+        font-size: 3.8vw;
+    }
 }
 
 @keyframes fade_in /*For animating the images*/
@@ -202,7 +241,8 @@ body
     background:linear-gradient(to bottom, #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%);
     min-height: 100vh;/*forces body to fill entire page no matter screen size*/
     margin: 0;
-    padding-top: 80px;
+    padding-top:90px;
+    padding-bottom: 120px;
 }
 
 .phoneOnly /*Class which only is used for phone displays. Hidden in all other CSS files*/
@@ -237,7 +277,10 @@ nav img
     padding: 10px;
 }
 
-
+section
+{
+    padding-bottom: 100px;
+}
 article h1
 {
     font-family: 'Fredoka One', cursive;
@@ -269,77 +312,72 @@ article li
 }
 
 
-#contact
+#contact /*contact form box*/
 {
-    float: left;
-    margin-left: 4%;
-    margin-top:1%;
+    margin-left: 2%;
+    margin-top: 2%;
     animation: fade_in 1.5s;
-    width:80%;
-    height:900px;
-    background: linear-gradient(to bottom, rgba(109,179,242,1) 0%,rgba(84,163,238,1) 50%,rgba(54,144,240,1) 51%,rgba(30,105,222,1) 100%);
+    width:90%;
+    height:600px;
+    height:auto;
+    background: transparent;
     border-radius: 10%;
     font-weight: bold;
 }
+
 #contact h1
 {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
-    margin-left:28%;
-    font-size: 36px;
+    margin-left:18%;
+    font-size: 24px;
 }
+
 #contact form
 {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: normal;
-    margin-left:5%;
-    font-size: 28px;
+    margin-left:15%;
+    font-size: 18px;
+
 }
 
 #contact textarea 
 {
     width: 80%;
     height: 150px;
-    font-size: 18px;
-    color: black;
+    background-color: grey;
+    color: white;
+    font-size: 14px;
 }
 
 #contact input 
 {
     width: 80%;
-    background-color: whitesmoke;
-    color: black;
-    font-size: 18px;
+    background-color: grey;
+    color: white;
+    font-size: 14px;
     padding: 12px 12px;
     box-sizing: border-box;
 }
 
-#contact input[type="submit"]
-{
-    width: 150px;
+#submit:hover /*When user clicks submit button on form*/
+{ 
+    color: green; 
+    background: linear-gradient(to bottom, rgba(245,246,246,1) 0%,rgba(219,220,226,1) 21%,rgba(184,186,198,1) 49%,rgba(221,223,227,1) 80%,rgba(245,246,246,1) 100%);
 }
 
 #submit
 { 
-    width: 20%;
-    float: left;
-    text-align: center;
-    color: black;
+    width: 150px;
+    margin-bottom: 15px;
     font-size: 20px;
-    margin-left: 2%;
-    margin-top:1%;
-    margin-bottom:1%;
     border-radius: 10px;
-    padding: 0.3%;
+    color: black;
+    padding: 5px;
+    display: block;
     background: linear-gradient(to bottom, rgba(179,220,237,1) 0%,rgba(41,184,229,1) 50%,rgba(188,224,238,1) 100%); 
 }
-#submit:hover
-{
-    background: linear-gradient(to bottom, rgba(245,246,246,1) 0%,rgba(219,220,226,1) 21%,rgba(184,186,198,1) 49%,rgba(221,223,227,1) 80%,rgba(245,246,246,1) 100%);
-    opacity:4;
-    padding: 0.38%;
-}
-
 .typewriter
 {
     float:left;
@@ -365,19 +403,7 @@ footer
 }
 
 /*---------------Code below is form https://codepen.io/denic/pen/GRoOxbM------------------*/
-.typewriter h2
-{
-    width: 38ch;
-    position:relative;
-    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
-    white-space: nowrap;
-    overflow: hidden;
-    margin-top:20px;
-    margin-left: 30px;
-    border-right: 3px solid;
-    font-family: monospace;
-    font-size: 2vw;
-}
+
 @keyframes typing 
 {
     from 
