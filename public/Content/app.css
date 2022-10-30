@@ -347,16 +347,12 @@ article li
 {
     width: 80%;
     height: 150px;
-    background-color: grey;
-    color: white;
     font-size: 14px;
 }
 
 #contact input 
 {
     width: 80%;
-    background-color: grey;
-    color: white;
     font-size: 14px;
     padding: 12px 12px;
     box-sizing: border-box;
