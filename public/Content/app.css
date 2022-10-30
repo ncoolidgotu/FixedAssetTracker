@@ -1,7 +1,6 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Rubik+Dirt&display=swap');
-/*Nate Coolidge - 100749708*
-/* Color scheme hexidecimal values #2372D9 #359AF2 #B9E1F7 #66BCF2 #CACAD4 */
+/*Nate Coolidge - 100749708*/
 
 @media screen and (min-width: 960px){
     /*Desktop CSS goes here*/
@@ -90,6 +89,7 @@
 }
 
 @media screen and (min-width: 481px) and (max-width: 960px) {
+    /*Tablet CSS goes here*/
     .phoneOnly{ display: none;}
     #home_images .img1
     {
@@ -165,6 +165,7 @@
 }
 
 @media screen and (max-width: 480px){
+    /*Phone CSS goes here*/
     .desktopOnly{ display: none;}
     .notOnPhone{ display: none;}
     #home_images .img2
@@ -329,7 +330,7 @@ article li
 {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
-    margin-left:18%;
+    margin-left:15%;
     font-size: 24px;
 }
 

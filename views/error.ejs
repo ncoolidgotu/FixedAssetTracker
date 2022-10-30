@@ -1,3 +1,9 @@
-<h1><%= message %></h1>
-<h2><%= error.status %></h2>
-<pre><%= error.stack %></pre>
+<!--Nate Coolidge - 100749708-->
+<%- include ./partials/header.ejs %>
+<%- include ./partials/main_nav.ejs %>
+<div class = "error">
+    <h1><%= message %></h1>
+    <h2><%= error.status %></h2>
+    <pre><%= error.stack %></pre>
+</div>
+<%- include ./partials/footer.ejs %>
