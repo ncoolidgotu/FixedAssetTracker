@@ -3,8 +3,8 @@
 /**
  * Module dependencies.
  */
-var app = require('./app');
-var debug = require('debug')('assignment2:server');
+var app = require('./server/config/app');
+var debug = require('debug')('fixed_assets:server');
 var http = require('http');
 
 /**

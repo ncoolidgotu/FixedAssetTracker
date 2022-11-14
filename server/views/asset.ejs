@@ -1,0 +1,32 @@
+<%- include ./partials/main_nav.ejs %>
+<main class="container">
+        <div class="row">
+            <div class="col-md-offset-3 col-md-15">
+                <h1><%= title %></h1>
+                <br>
+                <table class = "table table-bordered table-striped table-hover">
+                    <tr>
+                        <th class="text-center col-2">Asset Name</th>
+                        <th class="text-center col-2">Asset Class</th>
+                        <th class="text-center col-1">Asset Tag</th>
+                        <th class="text-center col-4">Asset Description</th>
+                        <th class="text-center col-2">Aquisition Date</th>
+                        <th class="text-center">Useful Life (Months)</th>
+                        <th class="text-center">Asset Cost</th>
+                    </tr>
+                    <% for(let count=0; count < Assetlist.length; count++) { %>
+                    <tr>
+                        <td class="text-center"><%= Assetlist[count].name %></td>
+                        <td class="text-center"><%= Assetlist[count].class %></td>
+                        <td class="text-center"><%= Assetlist[count].tag %></td>
+                        <td class="text-center"><%= Assetlist[count].description %></td>
+                        <td class="text-center"><%= Assetlist[count].aquisitionDate.toDateString() //extract date string%></td>
+                        <td class="text-center"><%= Assetlist[count].usefulLife %></td>
+                        <td class="text-center">$<%= Assetlist[count].cost %></td>
+                    </tr>
+                    <% } %>
+                </table>
+        </div>
+        </div>
+</main>
+<%- include ./partials/footer.ejs %>
