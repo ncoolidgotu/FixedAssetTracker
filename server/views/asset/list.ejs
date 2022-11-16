@@ -1,0 +1,52 @@
+<%- include ./../partials/main_nav.ejs %>
+<main class="container">
+        <div class="row">
+            <div class="col-md-offset-3 col-md-15">
+                <h1><%= title %></h1>
+                <a href="/asset-list/add" class="btn btn-primary" role="button">
+                    <i class="fas fa-plus-circle"></i> Asset Addition
+                </a>
+                <br>
+                <br>
+                <table class = "table table-bordered table-striped table-hover"> <!--Use Bootstrap table-->
+                <thead class="table-dark"> <!--Make table header dark-->
+                    <tr>
+                        <th class="text-center col-2">Asset Name</th> <!--Table columns-->
+                        <th class="text-center col-2">Asset Class</th>
+                        <th class="text-center col-1">Asset Tag</th>
+                        <th class="text-center col-4">Asset Description</th>
+                        <th class="text-center col-2">Aquisition Date</th>
+                        <th class="text-center col-1">Useful Life (Months)</th>
+                        <th class="text-center col-1">Asset Cost</th>
+                        <th class="text-center col-1"></th>
+                        <th class="text-center col-1"></th>
+                    </tr>
+                    </thead>
+                    <tbody> <!--Count items in database and create a row for each. For every row, display data at the count index in the database-->
+                    <% for(let count=0; count < Assetlist.length; count++) { %>
+                    <tr>
+                        <td class="text-center"><%= Assetlist[count].name %></td>
+                        <td class="text-center"><%= Assetlist[count].class %></td>
+                        <td class="text-center"><%= Assetlist[count].tag %></td>
+                        <td class="text-center"><%= Assetlist[count].description %></td>
+                        <td class="text-center"><%= Assetlist[count].aquisitionDate.toDateString() //extract date string%></td>
+                        <td class="text-center"><%= Assetlist[count].usefulLife %></td>
+                        <td class="text-center">$<%= Assetlist[count].cost %></td>
+                        <td class="text-center col-1">
+                            <a href='/asset-list/edit/<%= Assetlist[count]._id %>'
+                            class="btn btn-info"
+                            <i class="fas fas-pencil-alt">Update</i>
+                        </td>
+                        <td class="text-center col-1">
+                            <a href='/asset-list/delete/<%= Assetlist[count]._id %>'
+                            class="btn btn-danger"
+                            <i class="fas fas-pencil-alt">Retire</i>
+                        </td>
+                    </tr>
+                    <% } %>
+                    </tbody>
+                </table>
+        </div>
+        </div>
+</main>
+<%- include ./../partials/footer.ejs %>
