@@ -118,3 +118,20 @@ module.exports.nbvReport = (req, res, next)=>{ //make the function public within
         }
     });
 }
+
+module.exports.nbvCalculations = () => {
+    let costBalance = 0; //create variable to sum up cost of assets
+            let currentDate = new Date();
+            let totalNBV = 0;
+            let totalDepreciation = 0;
+            let currentDateInMonths = currentDate.getFullYear()*12+currentDate.getMonth(); //create constant for current date in number of months (used for NBV calculation)
+            for(let count=0; count < Assetlist.length; count++) { //Count items in database and create a row for each. For every row, display data at the count index in the database
+                        costBalance += Assetlist[count].cost //For every asset, add to the total cost
+                        usedLife = Assetlist[count].aquisitionDate.getMonth()+Assetlist[count].aquisitionDate.getFullYear()*12 //For every asset, calculate the months beteen now and aquisition (aquisition month + (year * 12))
+                        assetMonthlyDepr = Assetlist[count].cost/Assetlist[count].usefulLife //For every asset, divide cost by useful life to obtain monthly depreciation
+                        assetNBV = Assetlist[count].cost - (currentDateInMonths - usedLife) * assetMonthlyDepr //For every asset, calculate its net book value (NBV = cost - LTD depreciation)
+                        totalNBV += assetNBV //For every asset, add its NBV to total NBV
+                        totalDepreciation += assetMonthlyDepr //For every asset, add its monthly depreciation to the total depreciation
+            }
+
+}

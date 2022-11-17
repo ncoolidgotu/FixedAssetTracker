@@ -1,5 +1,5 @@
 <%- include ./../partials/main_nav.ejs %>
-<main class="container">
+<main class="container text-center">
         <%
             let costBalance = 0; //create variable to sum up cost of assets
             let currentDate = new Date();
@@ -16,14 +16,14 @@
                 <table class = "table table-bordered table-striped table-hover"> <!--Use Bootstrap table-->
                 <thead class="table-dark"> <!--Make table header dark-->
                     <tr>
-                        <th class="text-center col-2">Asset Name</th> <!--Table columns-->
-                        <th class="text-center col-2">Asset Class</th>
-                        <th class="text-center col-1">Asset Tag</th>
-                        <th class="text-center col-2">Aquisition Date</th>
-                        <th class="text-center col-1">Useful Life (Months)</th>
-                        <th class="text-center col-1">Asset Cost</th>
-                        <th class="text-center col-1">Monthly Depreciation</th>
-                        <th class="text-center col-1">Net Book Value</th>
+                        <th class="col-2">Asset Name</th> <!--Table columns-->
+                        <th class="col-2">Asset Class</th>
+                        <th class="col-1">Asset Tag</th>
+                        <th class="col-2">Aquisition Date</th>
+                        <th class="col-1">Useful Life (Months)</th>
+                        <th class="col-1">Asset Cost</th>
+                        <th class="col-1">Monthly Depreciation</th>
+                        <th class="col-1">Net Book Value</th>
                     </tr>
                     </thead>
                     <tbody>

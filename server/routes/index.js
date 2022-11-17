@@ -4,6 +4,7 @@ var express = require('express');
 var router = express.Router();
 let indexController = require("../controller/index"); //access index controller module
 
+
 /* GET home page. */
 router.get('/', indexController.displayDashboard); //retrieve index view from indexController
 
