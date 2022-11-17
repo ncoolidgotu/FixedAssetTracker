@@ -1,8 +1,16 @@
 <%- include ./../partials/main_nav.ejs %>
 <main class="container">
+        <%
+            let costBalance = 0; //create variable to sum up cost of assets
+            let currentDate = new Date();
+            let totalNBV = 0;
+            let totalDepreciation = 0;
+            let currentDateInMonths = currentDate.getFullYear()*12+currentDate.getMonth(); //create constant for current date in number of months (used for NBV calculation)
+        %>
         <div class="row">
             <div class="col-md-offset-3 col-md-15">
                 <h1><%= title %></h1>
+                <h4>Today is <%= currentDate.toDateString() %></h4>
                 <br>
                 <br>
                 <table class = "table table-bordered table-striped table-hover"> <!--Use Bootstrap table-->
@@ -11,36 +19,45 @@
                         <th class="text-center col-2">Asset Name</th> <!--Table columns-->
                         <th class="text-center col-2">Asset Class</th>
                         <th class="text-center col-1">Asset Tag</th>
-                        <th class="text-center col-4">Asset Description</th>
                         <th class="text-center col-2">Aquisition Date</th>
                         <th class="text-center col-1">Useful Life (Months)</th>
                         <th class="text-center col-1">Asset Cost</th>
-                        <th class="text-center col-1"></th>
-                        <th class="text-center col-1"></th>
+                        <th class="text-center col-1">Monthly Depreciation</th>
+                        <th class="text-center col-1">Net Book Value</th>
                     </tr>
                     </thead>
-                    <tbody> <!--Count items in database and create a row for each. For every row, display data at the count index in the database-->
-                    <% for(let count=0; count < Assetlist.length; count++) { %>
+                    <tbody>
+                    <%
+                    for(let count=0; count < Assetlist.length; count++) { //Count items in database and create a row for each. For every row, display data at the count index in the database
+                        costBalance += Assetlist[count].cost //For every asset, add to the total cost
+                        usedLife = Assetlist[count].aquisitionDate.getMonth()+Assetlist[count].aquisitionDate.getFullYear()*12 //For every asset, calculate the months beteen now and aquisition (aquisition month + (year * 12))
+                        assetMonthlyDepr = Assetlist[count].cost/Assetlist[count].usefulLife //For every asset, divide cost by useful life to obtain monthly depreciation
+                        assetNBV = Assetlist[count].cost - (currentDateInMonths - usedLife) * assetMonthlyDepr //For every asset, calculate its net book value (NBV = cost - LTD depreciation)
+                        totalNBV += assetNBV //For every asset, add its NBV to total NBV
+                        totalDepreciation += assetMonthlyDepr //For every asset, add its monthly depreciation to the total depreciation
+                    %>
                     <tr>
                         <td class="text-center"><%= Assetlist[count].name %></td>
                         <td class="text-center"><%= Assetlist[count].class %></td>
                         <td class="text-center"><%= Assetlist[count].tag %></td>
-                        <td class="text-center"><%= Assetlist[count].description %></td>
                         <td class="text-center"><%= Assetlist[count].aquisitionDate.toDateString() //extract date string%></td>
                         <td class="text-center"><%= Assetlist[count].usefulLife %></td>
-                        <td class="text-center">$<%= Assetlist[count].cost %></td>
-                        <td class="text-center col-1">
-                            <a href='/asset-list/update/<%= Assetlist[count]._id %>'
-                            class="btn btn-info"
-                            <i class="fas fas-pencil-alt">Update</i>
-                        </td>
-                        <td class="text-center col-1">
-                            <a href='/asset-list/retire/<%= Assetlist[count]._id %>'
-                            class="btn btn-danger retireConfirm"
-                            <i class="fas fas-pencil-alt">Retire</i>
-                        </td>
+                        <td class="text-center">$<%= Math.round(Assetlist[count].cost) %></td>
+                        <td class="text-center">$<%= Math.round(assetMonthlyDepr) %></td>
+                        <td class="text-center">$<%= Math.round(assetNBV) %></td>
                     </tr>
                     <% } %>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th>TOTAL:</th>
+                        <th class="text-center"> $<%= Math.round(costBalance) %></th>
+                        <th class="text-center"> $<%= Math.round(totalDepreciation) %></th>
+                        <th class="text-center"> $<%= Math.round(totalNBV) %></th>
+                    </tr>
+                    
                     </tbody>
                 </table>
         </div>

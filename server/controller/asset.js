@@ -101,3 +101,20 @@ module.exports.retireAsset = (req, res, next)=> { //make the function public wit
         }
     })
 }
+
+module.exports.nbvReport = (req, res, next)=>{ //make the function public within a module
+    Asset.find((err, assetlist)=>{
+        if(err)
+        {
+            return console.error(err);
+        }
+        else
+        {
+            res.render('asset/nbv',{
+                title: 'Asset Net Book Value', 
+                Assetlist: assetlist,
+            })
+            console.log(assetlist);
+        }
+    });
+}

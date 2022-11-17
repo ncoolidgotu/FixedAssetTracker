@@ -39,5 +39,7 @@ router.post('/update/:id', assetController.processAssetChanges);
 
 router.get('/retire/:id', assetController.retireAsset);
 
+router.get('/nbv', assetController.nbvReport);
+
 
 module.exports=router; //declare as a router, make all functions public
