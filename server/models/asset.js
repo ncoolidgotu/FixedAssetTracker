@@ -10,6 +10,6 @@ let assetModel = mongoose.Schema({
     cost: Number,
 },
 {
-    collection: "assets"
+    collection: "assets" //access the asset collection
 });
-module.exports = mongoose.model('Asset', assetModel)
+module.exports = mongoose.model('Asset', assetModel) //export the model so it can be used

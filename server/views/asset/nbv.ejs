@@ -2,7 +2,7 @@
 <main class="container text-center">
         <%
             let costBalance = 0; //create variable to sum up cost of assets
-            let currentDate = new Date();
+            let currentDate = new Date(); // create instance of built-in object extract current date
             let totalNBV = 0;
             let totalDepreciation = 0;
             let currentDateInMonths = currentDate.getFullYear()*12+currentDate.getMonth(); //create constant for current date in number of months (used for NBV calculation)
@@ -19,7 +19,7 @@
                         <th class="col-2">Asset Name</th> <!--Table columns-->
                         <th class="col-2">Asset Class</th>
                         <th class="col-1">Asset Tag</th>
-                        <th class="col-2">Aquisition Date</th>
+                        <th class="col-2">Acquisition Date</th>
                         <th class="col-1">Useful Life (Months)</th>
                         <th class="col-1">Asset Cost</th>
                         <th class="col-1">Monthly Depreciation</th>
@@ -42,12 +42,12 @@
                         <td class="text-center"><%= Assetlist[count].tag %></td>
                         <td class="text-center"><%= Assetlist[count].aquisitionDate.toDateString() //extract date string%></td>
                         <td class="text-center"><%= Assetlist[count].usefulLife %></td>
-                        <td class="text-center">$<%= Math.round(Assetlist[count].cost) %></td>
+                        <td class="text-center">$<%= Math.round(Assetlist[count].cost) //round number to look better%></td>
                         <td class="text-center">$<%= Math.round(assetMonthlyDepr) %></td>
                         <td class="text-center">$<%= Math.round(assetNBV) %></td>
                     </tr>
                     <% } %>
-                    <tr>
+                    <tr> <!--Final row to store totals, using th for bold text-->
                         <th></th>
                         <th></th>
                         <th></th>

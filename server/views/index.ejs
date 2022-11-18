@@ -1,8 +1,10 @@
 <%- include ./partials/main_nav.ejs %>
 <%
 
+//The below is used to display the summary infomation about the asset value in the dashboard
+
 let costBalance = 0; //create variable to sum up cost of assets
-            let currentDate = new Date();
+            let currentDate = new Date(); // create instance of built-in object extract current date
             let totalNBV = 0;
             let totalDepreciation = 0;
             let currentDateInMonths = currentDate.getFullYear()*12+currentDate.getMonth(); //create constant for current date in number of months (used for NBV calculation)

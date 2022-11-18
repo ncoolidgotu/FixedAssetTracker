@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-md-offset-3 col-md-6">
             <h1><%= title %></h1>
-            <form class="form" method="post">
+            <form class="form" method="post"> <!--Form field for asset name-->
             <div class="form-field">
                 <label for="nameField">Asset Name</label>
                 <input type="text" class="form-control"
@@ -13,7 +13,7 @@
                     name = "name" required>
             </div>
             <br>
-            <div class="form-field">
+            <div class="form-field"> <!--Form input field for asset description-->
                 <label for="descField">Asset Description</label>
                 <input type="text" class="form-control"
                     id = "descField"
@@ -21,7 +21,7 @@
                     name = "description" required>
             </div>
             <br>
-            <div class="form-field">
+            <div class="form-field"> <!--Form select field for asset class-->
                 <label for="classField">Choose an Asset Class:</label>
                 <select type="text" class="form-control"
                     id = "classField"
@@ -38,23 +38,23 @@
             </div>
             <br>
 
-            <div class="form-field">
+            <div class="form-field"> <!--Form input field for asset tag--> <!--Restrict length to 8 characters-->
                 <label for="tagField">Asset Tag</label>
                 <input type="text" class="form-control"
                     id = "descField"
                     placeholder = "Enter an asset tag (8 char or less)"
-                    max = 8
+                    maxlength = 8
                     name = "tag" required>
             </div>
             <br>
-            <div class="form-field">
-                <label for="dateField">Select the Aquisition Date:</label>
+            <div class="form-field"> <!--Form date field for asset aquistion date-->
+                <label for="dateField">Select the Acquisition Date:</label>
                 <input type="date" class="form-control"
                     id = "dateField"
                     name = "aquisitionDate" required>
             </div>
             <br>
-            <div class="form-field">
+            <div class="form-field"> <!--Form number input field for asset useful life in months--> <!--Min 1 year and max 30-->
                 <label for="lifeField">Useful Life:</label>
                 <input type="number" class="form-control"
                     min = "12"
@@ -64,7 +64,7 @@
                     name = "usefulLife" required>
             </div>
             <br>
-            <div class="form-field">
+            <div class="form-field"> <!--Form number field for asset cost--> <!--Asset must be over $100 to conform with accounting guidelines-->
                 <label for="lifeField">Asset Cost:</label>
                 <input type="number" class="form-control"
                     min = "100"
@@ -74,11 +74,11 @@
                     name = "cost" required>
             </div>
             <br>
-            <button class="btn btn-success" type="submit">
+            <button class="btn btn-success" type="submit"> <!--Button to add the asset-->
                 <i class="fa-regular fa-check-to-slot"></i> Capitalize Asset
             </button>
 
-            <a href="/asset-list" class="btn btn-warning">
+            <a href="/asset-list" class="btn btn-warning"> <!--Button to cancel addition and return to asset list-->
             <i class="fa-regular fa-xmark"></i> Cancel</a>
             
         </div>

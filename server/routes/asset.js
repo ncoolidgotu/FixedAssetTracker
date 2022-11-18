@@ -8,11 +8,13 @@ let Asset = require('../models/asset')
 
 let assetController = require('../controller/asset')
 
+
 // Read Operation
 
 // Get route for the asset list
 
 router.get('/', assetController.displayAssetList);
+
 
 // Create operation
 
@@ -33,13 +35,17 @@ router.get('/update/:id', assetController.displayUpdatePage);
 
 router.post('/update/:id', assetController.processAssetChanges);
 
-// Delete operation
 
-// Get to perform delete operation
+
+// Read Operation (Different read view for asset value calculations)
+
+// Get to perform read operations
 
 router.get('/retire/:id', assetController.retireAsset);
 
 router.get('/nbv', assetController.nbvReport);
+
+
 
 
 module.exports=router; //declare as a router, make all functions public

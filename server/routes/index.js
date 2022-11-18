@@ -12,4 +12,4 @@ router.get('/', indexController.displayDashboard); //retrieve index view from in
 router.get('/dashboard', indexController.displayDashboard); //retrieve index view from indexController
 
 
-module.exports = router; //Make it public
+module.exports = router; //declare as a router, make all functions public
