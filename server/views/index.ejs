@@ -21,7 +21,11 @@ let costBalance = 0; //create variable to sum up cost of assets
 <main class="container text-center">
     <h1>Fixed Asset Management</h1>
     <br>
-    <div class="container dashboard text-start">
+    <h4>Today is <%= currentDate.toDateString() %></h4> <!--Built-in method to convert ISO date to readable string with only date-->
+    <br>
+    <br>
+    <h3>Summary of Assets:</h3>
+    <div class="container-fluid dashboard">
         <h2>Total Cost Balance: $<%= Math.round(costBalance)%></h2>
         <br>
         <h2>Depreciation This Month: $<%= Math.round(totalDepreciation)%> </h2>

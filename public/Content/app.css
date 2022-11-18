@@ -3,19 +3,6 @@
 
 /*Nate Coolidge - 100749708*/
 
-@media screen and (min-width: 960px){
-    /*Desktop CSS goes here*/
-}
-
-@media screen and (min-width: 481px) and (max-width: 960px) {
-    
-}
-
-@media screen and (max-width: 480px){
-    /*Phone CSS goes here*/
-    
-}
-
 body 
 { 
     font-family: 'Lexend', sans-serif;
@@ -43,19 +30,32 @@ nav
     font-weight: 900;
 }
 
-.container h2
+.container h3
 {
     font-family: 'Lexend', sans-serif;
-    font-weight: 300;
-    font-size: 24px;
+    font-weight: 900;
 }
 
 .dashboard
 {
-    padding-right: 200px;
+
+    margin-top: 20px;
+    margin-left: 30%;
+    height:300px;
+    width: 600px;
+    background: linear-gradient(to bottom, rgba(184,225,252,1) 0%,rgba(169,210,243,1) 10%,rgba(144,186,228,1) 25%,rgba(144,188,234,1) 37%,rgba(144,191,240,1) 50%,rgba(162,218,245,1) 83%,rgba(189,243,253,1) 100%);
+    border-radius: 20px;
 }
 
 
+.dashboard h2
+{
+    font-family: 'Lexend', sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    padding-top: 30px;
+    text-align: center;
+}
 
 
 .navimg
