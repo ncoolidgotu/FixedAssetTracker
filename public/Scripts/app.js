@@ -1,4 +1,5 @@
-// IIFE --> Immediately invoked function expression
+//Nate Coolidge - 100749708
+
 
 (function(){
     function Start()

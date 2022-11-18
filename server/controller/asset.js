@@ -3,6 +3,8 @@ let router = express.Router(); //create router
 let mongoose = require('mongoose'); //use mongoose library
 let Asset = require('../models/asset') // connect with asset model
 
+//Nate Coolidge - 100749708
+
 module.exports.displayAssetList = (req, res, next)=>{ //make the function public within a module
     Asset.find((err, assetlist)=>{
         if(err)

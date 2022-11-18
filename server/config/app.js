@@ -4,6 +4,8 @@ let path = require('path'); //import paths
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
 
+//Nate Coolidge - 100749708
+
 //config mongoDB
 let mongoose = require('mongoose'); //library
 let DB = require('./db'); //access db module which contains URI variable
