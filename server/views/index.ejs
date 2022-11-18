@@ -21,10 +21,12 @@ let costBalance = 0; //create variable to sum up cost of assets
 <main class="container text-center">
     <h1>Fixed Asset Management</h1>
     <br>
-    <h2>Total Cost Balance: $<%= Math.round(costBalance)%></h2>
-    <br>
-    <h2>Depreciation This Month: $<%= Math.round(totalDepreciation)%> </h2>
-    <br>
-    <h2>Net Book Value: $<%= Math.round(totalNBV)%></h2>
+    <div class="container dashboard text-start">
+        <h2>Total Cost Balance: $<%= Math.round(costBalance)%></h2>
+        <br>
+        <h2>Depreciation This Month: $<%= Math.round(totalDepreciation)%> </h2>
+        <br>
+        <h2>Net Book Value: $<%= Math.round(totalNBV)%></h2>
+    </div>
 </main>
 <%- include ./partials/footer.ejs %>
